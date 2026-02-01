@@ -103,7 +103,7 @@ createjail() {
     fi
   done
   
-  if [ ! $option = "donotcreatedataset" ]
+  if [ "$option" != "donotcreatedataset" ]
   then
     # create dataset for each username/jail; mount to jails location
       zfs create $dataset/$username
@@ -140,7 +140,7 @@ createjail() {
         newval=0$newval
       fi
       newserial=$currentdate$newval
-    elif [ ! "$olddate" = "$currentdate" ]
+    elif [ "$olddate" != "$currentdate" ]
     then
       newserial=${currentdate}00
     fi
