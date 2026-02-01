@@ -78,7 +78,7 @@ createjail() {
   fi
   
   # check if username already exists; end if it does
-  if [ -d "$location/$username" -a ! $option = "donotcreatedataset" ]
+  if [ -d "$location/$username" ] && [ "$option" != "donotcreatedataset" ]
   then
     echo "2 - A jail for $username already exists" 1>&2
     exit 2
