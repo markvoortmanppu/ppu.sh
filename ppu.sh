@@ -198,8 +198,7 @@ confjail() {
     poudriererepodir=/usr/local/etc/pkg/repos
     usernamerepodir=$location/$username/usr/local/etc/pkg/repos
     mkdir -p $usernamerepodir
-    cp -f $poudriererepodir/freebsd.conf $usernamerepodir/
-    cp -f $poudriererepodir/poudriere.conf $usernamerepodir/
+    cp -f $poudriererepodir/FreeBSD.conf $usernamerepodir/
   fi
 }
 
